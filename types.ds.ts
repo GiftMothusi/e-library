@@ -10,6 +10,7 @@ interface Book {
     color: string;
     cover: string;
     videoUrl: string;
+    isLoanedBook: boolean;
     summary: string;
     createdAt: Date | null;
   }
