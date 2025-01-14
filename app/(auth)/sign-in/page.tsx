@@ -2,8 +2,9 @@
 import AuthForm from '@/components/AuthForm'
 import React from 'react'
 import { signInSchema } from '@/lib/validations'
+import { signInWithCredentials } from '@/lib/actions/auth'
 
-const SignIn = () => (
+const Page = () => (
    <AuthForm
         type="SIGN_IN"
         schema={signInSchema}
@@ -11,8 +12,8 @@ const SignIn = () => (
         email: '',
         password: '',
         }}
-        onSubmit={() => {}}
+        onSubmit={signInWithCredentials}
    />
 )
 
-export default SignIn
+export default Page
