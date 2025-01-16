@@ -96,7 +96,7 @@ npm run dev
 
 ### Commit Convention
 Follow [Conventional Commits](https://www.conventionalcommits.org/):
-- `feat:` New features
+- `feature:` New features
 - `fix:` Bug fixes
 - `chore:` Maintenance tasks
 - `docs:` Documentation updates
