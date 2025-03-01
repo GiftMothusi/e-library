@@ -16,5 +16,12 @@ const imagekit = new ImageKit({
 });
 
 export async function GET(){
-    return NextResponse.json(imagekit.getAuthenticationParameters());
+    const response = NextResponse.json(imagekit.getAuthenticationParameters());
+
+    // Fix CORS issues
+    response.headers.set("Access-Control-Allow-Origin", "*");
+    response.headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
+    return response;
 }
